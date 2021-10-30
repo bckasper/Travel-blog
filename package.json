@@ -12,11 +12,13 @@
         "express-session": "^1.17.2",
         "mysql": "^2.18.1",
         "mysql2": "^2.3.2",
+        "nodemon": "^2.0.14",
         "sequelize": "^6.8.0"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
+        "start": "nodemon server.js",
+        "seed": "node seeds/seed.js"
     },
     "repository": {
         "type": "git",
