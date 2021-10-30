@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // handlebars setup
-const hbs = exphbs.create({ });
+const hbs = exphbs.create();
 
 const sess = {
     secret: '1234',
@@ -20,10 +20,10 @@ const sess = {
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
-      db: sequelize
+        db: sequelize
     })
-  };
-  
+};
+
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
@@ -36,5 +36,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Express server listening on port ${PORT}!`));
+    app.listen(PORT, () => console.log(`Express server listening on port ${PORT}!`));
 });
