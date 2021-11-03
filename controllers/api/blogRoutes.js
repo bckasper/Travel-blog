@@ -27,6 +27,28 @@ router.get('/:id', async(req, res) =>{
 })
 
 
+// GET route for single country search
+router.get('/country/:country_name', async(req, res) =>{
+
+    try{
+        const blogByCountry = await Blogs.findAll(
+            {
+              where: { 
+                country_name: req.params.country_name
+              },
+            })
+
+        if(!blogByCountry){res.status(404).json({message: 'No blogs for this country!'})
+        return
+        }
+        
+        res.status(200).json(blogByCountry)
+
+    } catch(err){
+        res.status(400).json(err)
+    }
+})
+
 // Post new blog post
 router.post('/', async(req, res) => {
     try {
