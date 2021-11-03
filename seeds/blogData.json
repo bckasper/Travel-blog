@@ -1,0 +1,16 @@
+[{
+        "name": "Waterfalls",
+        "description": "Enjoyed the waterfalls & scenery,but otherwise average movie. If you're a fan of the lead actors too,may find it watchable.",
+        "country_name": "United States"
+    },
+    {
+        "name": "Foods",
+        "description": "A typical Chinese meal will have two things - a carbohydrate or starch like noodles, rice or buns, and accompanying stir fries or dishes of veggies, fish and meat.",
+        "country_name": "China"
+    },
+    {
+        "name": "Culture",
+        "description": "Two major religions influence Japanese traditions and culture: Shintoism and Buddhism.",
+        "country_name": "Japan"
+    }
+]
