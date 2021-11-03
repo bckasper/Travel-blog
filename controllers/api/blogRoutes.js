@@ -13,6 +13,19 @@ router.get('/', async(req, res) => {
 })
 
 
+// GET route for single blog post
+router.get('/:id', async(req, res) =>{
+
+    try{
+        const blog = await Blogs.findByPk(req.params.id)
+
+        res.status(200).json(blog)
+
+    } catch(err){
+        res.status(400).json(err)
+    }
+})
+
 
 // Post new blog post
 router.post('/', async(req, res) => {
@@ -46,4 +59,5 @@ router.delete('/:id', async(req, res) => {
         res.status(500).json(err);
     }
 });
+
 module.exports = router;
