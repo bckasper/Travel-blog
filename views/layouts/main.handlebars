@@ -2,34 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Reviews</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  {{!-- <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css"> --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 
 <body>
-  <header>
-    <h1>Travel Blog and Reviews</h1>
-  </header>
-  <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
-  <main>
-    <aside>
-      <h2>Please enter the reviews!</h2>
-    </aside>
-    <div class="gallery">
-      {{{body}}}
-    </div>
-  </main>
-  {{#if loggedIn}}
+  <div class="container has-text-centered">
+    <header class="navbar has-background-link-light">
+      <h1 class="is-size-1 has-text-weight-semibold">Travel Blog & Reviews!</h1>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{!-- add blog link --}}
+        {{/if}}
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer class="footer has-background-link-light">
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
