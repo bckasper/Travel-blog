@@ -66,17 +66,16 @@ router.post('/', async(req, res) => {
 // Delete blogpost with specific post id
 router.delete('/:id', async(req, res) => {
     try {
-        const newBlogData = await Blogs.destroy({
+        const deleteBlog = await Blogs.destroy({
             where: {
                 id: req.params.id,
-                user_id: req.session.user_id,
             },
         });
-        if (!newBlogData) {
+        if (!deleteBlog) {
             res.status(404).json({ message: 'No blog found with this id!' });
             return;
         }
-        res.status(200).json(newBlogData);
+        res.status(200).json(deleteBlog);
     } catch (err) {
         res.status(500).json(err);
     }
