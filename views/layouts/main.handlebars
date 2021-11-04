@@ -5,28 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Reviews</title>
-  {{!-- <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css"> --}}
+  {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 
 <body>
-  <div>
-    <header class="hero navbar-menu has-background-link-light block">
-      <h1 class="title">Travel Blog & Reviews!</h1>
+  <div class="block">
+    <header class="navbar block has-background-link-light">
+      <h1 class="navbar-item title is-2 has-text-grey">Travel Blog & Reviews!</h1>
         <!-- Conditionally render login or logout links -->
-        <div class="navbar-end subtitle">
-        {{#if logged_in}}
-        <a href="/profile">profile</a> 
-        <button class="button">logout</button>
-        {{else}}
-        <div class="navbar-item">
-        <a href="/login">login</a>
-        </div>
-        {{!-- add blog link --}}
-        {{/if}}
-        </div>
+        <div class="subtitle">
+          {{#if logged_in}}
+          <div class="navbar-item">
+            <a href="/profile">Profile</a> 
+          </div>
+          <div class="navbar-item">
+            <button class="button">Logout</button>
+            {{else}} 
+          </div>
+          <div class="navbar-item navbar-end is-hoverable">
+            <button class="button is-primary" type="submit">Login</button>
+          </div>
+          {{!-- <div class="navbar-item">
+            <a href="/blog">Blog/Reviews</a>
+          </div> --}}
+            {{/if}}
+        </div> 
     </header>
+  </div>
     <main>
       <!-- Render the sub layout -->
       {{{ body }}}
