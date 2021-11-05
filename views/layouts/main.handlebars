@@ -16,19 +16,12 @@
       <h1 class="navbar-item title is-2 has-text-grey">Travel Blog & Reviews!</h1>
         <!-- Conditionally render login or logout links -->
         <div class="subtitle">
-          {{#if logged_in}}
-          <div class="navbar-item">
-            <a href="/home">Home Page</a> 
-          </div>
-          <div class="navbar-item">
-            <button class="button">Logout</button>
-            {{else}} 
-          </div>
-          
-          {{!-- <div class="navbar-item">
-            <a href="/blog">Blog/Reviews</a>
-          </div> --}}
-            {{/if}}
+         <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
         </div> 
     </header>
   </div>
