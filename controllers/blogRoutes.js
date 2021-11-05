@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Blogs } = require('../../models');
+const { Blogs } = require('../models');
 
 // GET route for all blog posts
 router.get('/', async(req, res) => {
-    try{
+    try {
         const blogs = await Blogs.findAll()
 
-        res.status(200).json(blogs)
+        res.render('home', { blogs })
     } catch (err) {
         res.status(500).json(err)
     }
@@ -14,37 +14,37 @@ router.get('/', async(req, res) => {
 
 
 // GET route for single blog post
-router.get('/:id', async(req, res) =>{
+router.get('/:id', async(req, res) => {
 
-    try{
+    try {
         const blog = await Blogs.findByPk(req.params.id)
 
         res.status(200).json(blog)
 
-    } catch(err){
+    } catch (err) {
         res.status(400).json(err)
     }
 })
 
 
 // GET route for single country search
-router.get('/country/:country_name', async(req, res) =>{
+router.get('/country/:country_name', async(req, res) => {
 
-    try{
-        const blogByCountry = await Blogs.findAll(
-            {
-              where: { 
+    try {
+        const blogByCountry = await Blogs.findAll({
+            where: {
                 country_name: req.params.country_name
-              },
-            })
+            },
+        })
 
-        if(!blogByCountry){res.status(404).json({message: 'No blogs for this country!'})
-        return
+        if (!blogByCountry) {
+            res.status(404).json({ message: 'No blogs for this country!' })
+            return
         }
-        
+
         res.status(200).json(blogByCountry)
 
-    } catch(err){
+    } catch (err) {
         res.status(400).json(err)
     }
 })
