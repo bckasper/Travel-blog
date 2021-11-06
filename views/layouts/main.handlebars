@@ -11,25 +11,40 @@
 </head>
 
 <body>
-  <div class="block">
-    <header class="navbar block has-background-link-light">
-      <h1 class="navbar-item title is-2 has-text-grey">Travel Blog & Reviews!</h1>
-        <!-- Conditionally render login or logout links -->
-        <div class="subtitle">
-         <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-        </div> 
-    </header>
+  <nav class="is-flex navbar has-background-link-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand is-flex flex-wrap">
+    <h1 class="is-flex is-flex-wrap-wrap navbar-item title">Travel Blog and Reviews!</h1>
   </div>
+
+  {{!-- <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <a href="/" class="navbar-item">
+        Home
+      </a>
+      <a href="/" class="navbar-item">
+        Logout
+      </a>
+    </div> --}}
+        
+    {{#if logged_in}}
+    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <a href="/" class="navbar-item">
+        Home
+      </a>
+      <a href="/" class="navbar-item">
+        Logout
+      </a>
+    </div>
+    {{/if}}
+      
+    </div>
+  </nav>
     <main>
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer class="footer has-background-link-light block">
+    <footer class="footer has-background-link-primary block">
       
     </footer>
   </div>
