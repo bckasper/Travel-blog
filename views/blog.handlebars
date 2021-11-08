@@ -1,5 +1,12 @@
-
-<section class="container">
-  <h3 class="blog-name">{{blog.name}}</h3>
-  </section>
-</section>
+<div class="text-center">
+  <h2>{{name}}</h2>
+  <p>{{description}}</p>
+  <p>Created by {{user.username}} on {{format_date date_created}}</p>
+  <p>
+    <span for="img" aria-label="review">✍</span>
+  <p>{{country_name}}</p>
+  </p>
+  <p>
+    <button class="button is-primary my-3">Edit</button>
+  </p>
+</div>

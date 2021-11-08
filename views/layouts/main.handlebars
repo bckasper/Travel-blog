@@ -29,10 +29,13 @@
     {{#if logged_in}}
     <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-end">
-      <a href="/" class="navbar-item">
+      <a href="/login" class="navbar-item">
         Home
       </a>
-      <a href="/" class="navbar-item">
+      <a href="/profile" class="navbar-item">
+        Profile
+      </a>
+      <a href="/" class="navbar-item" id="logout">
         Logout
       </a>
     </div>
@@ -44,7 +47,9 @@
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    
+    <footer class="footer has-background-link-primary block">
+      
+    </footer>
   </div>
 
   <!-- Render script for logged in users only -->

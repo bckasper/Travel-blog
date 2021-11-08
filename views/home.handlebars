@@ -1,6 +1,4 @@
-{{#each blogs as |blog|}}
-{{> blog-details}}
-{{/each}}
+
 <div class="columns is-centered m-3">
    <div class="column m-3 is-one-quarter">
 
@@ -8,7 +6,7 @@
         <h2 class="block subtitle">Read reviews of various countries.</h2>
         <form>
         <div class="field">
-            <button class="button is-primary" type="submit">Read Reviews</button>
+            <h3><a id="readreview" href="#">Read Reviews</a></h3>
         </div>
         </form>
   </div>
@@ -20,7 +18,7 @@
                 <h2 class="block subtitle">Write a review of a country you've visited.</h2>
             <form>
                 <div class="field">
-                    <button class="button is-primary" type="submit">Write Review</button>
+                     <h3><a id="writereview" href="#">Write Reviews</a></h3>
                 </div>
             </form>
         </div>    
@@ -28,3 +26,6 @@
 
   </div>
 </div>
+
+
+<script src="./js/home.js"></script>
