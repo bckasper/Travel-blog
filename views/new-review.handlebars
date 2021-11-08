@@ -1,0 +1,30 @@
+<!-- Render the sub layout -->
+<div class="field columns p-2 is-centered ">
+  <form class="is-half mx-6  my-3 p-3 has-background-light column is-centered create-blog-form">
+    <!-- Dropdown for countries -->
+    {{!-- <div class="field select">
+      <select class="field has-text-centered" id="country-select">
+        <option>Select Country</option>
+      </select>
+    </div> --}}
+
+    <div class="field">
+      <label class="label" for="review-title">Country Name</label>
+      <input class="input" type="text" id="country-name" />
+    </div>
+
+    <div class="field">
+      <label class="label" for="review-title">Review Title:</label>
+      <input class="input" type="text" id="blog-name" />
+    </div>
+    <div class="field">
+      <label class="label" for="review-body">Review:</label>
+      <textarea id="blog-text" class="textarea" placeholder="Enter your review here"></textarea>
+    </div>
+    <div class="field has-text-centered">
+      <button id="blog-post" class="button is-primary my-3" type="submit">Post</button>
+    </div>
+  </form>
+</div>
+
+<script src="./js/new-review.js"></script>

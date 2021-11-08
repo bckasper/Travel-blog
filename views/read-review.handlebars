@@ -1,10 +1,15 @@
-<p>read reviews page</p>
-
-{{!-- create drop down list of coiuntries to search by destination --}}
-<div class="dropdown is-active">
-  <div class="dropdown-trigger">
-    <button class="button">
-      <span>Please Select a Destination to Review</span>
-    </button>
+<!-- Loop over each object in the projects array -->
+{{#each blogs as |blog| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
+    </h2>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{blog.description}}
+    </p>
   </div>
 </div>
+{{/each}}
