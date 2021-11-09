@@ -11,20 +11,10 @@
 </head>
 
 <body>
-  <nav class="navbar has-background-link-light" role="navigation" aria-label="main navigation">
+  <nav class="block navbar has-background-link-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand is-flex flex-wrap">
     <h1 class="is-flex is-flex-wrap-wrap navbar-item title">Travel Blog and Reviews!</h1>
   </div>
-
-  {{!-- <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-end">
-      <a href="/" class="navbar-item">
-        Home
-      </a>
-      <a href="/" class="navbar-item">
-        Logout
-      </a>
-    </div> --}}
         
     {{#if logged_in}}
     <div id="navbarBasicExample" class="navbar-menu">
@@ -47,9 +37,6 @@
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer class="footer has-background-link-primary block">
-      
-    </footer>
   </div>
 
   <!-- Render script for logged in users only -->
