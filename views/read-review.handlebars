@@ -1,4 +1,8 @@
 
+<div class="column block panel is-primary is-centered is-vcentered">
+  <h1 class="panel-heading has-text-centered">Read Reviews</h1>
+</div>
+
 <!-- Loop over each object in the blogs array -->
 {{#if blogs.length}}
   <div class="columns p-6 blog-list">
@@ -16,14 +20,10 @@
     </p>
     <div class="col-md-4 delete-button">
         <button id="delete-button" data-id="{{blog.id}}" type="submit" class= "button is-primary my-3" >Delete</button>
+
     </div>
   </div>
-</div>
 {{/each}}
  </div>
- 
-
-      </div>
-
  {{/if}}
 <script src="./js/read-review.js"></script>

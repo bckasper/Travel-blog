@@ -1,12 +1,17 @@
-<div class="columns p-2">
-    <div class="column">
-      
-      <h2>Profile</h2><br>
-      <p id="user-id">ID: {{ id }}</p>
-      <p id="user-name">Name:{{ username }}</p>
-      <p id="user-email">Email: {{ email }}</p>
+<div class="columns p-2 panel is-primary is-centered is-vcentered">
+    <div class="column is-mobile is-half">
+      <div class="column box">
+      <h2 class="panel-heading">Profile Information</h2><br>
+      <div class= "subtitle">
+      <p class= "block" id="user-id">ID: {{ id }}</p>
+      <p class= "block" id="user-name">Name: {{ username }}</p>
+      <p class= "block" id="user-email">Email: {{ email }}</p>
+      </div>
       <br>
-      <button class= "button is-primary my-3" type="submit" value="submit">EDIT</button>
+      <div class="has-text-centered">
+      <button class= "button is-primary" type="submit" value="submit">EDIT</button>
+      </div>
+      </div>
     </div>
   </div>
 

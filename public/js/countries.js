@@ -1,3 +1,5 @@
+
+
 const countries = [
     'Afghanistan', 
     'Albania', 
@@ -197,4 +199,18 @@ const countries = [
     'Zimbabwe'
 ]
 
-module.exports = countries
+const inputCountries = () => {
+    
+    const countryList = document.getElementById("country-select")
+
+    for (var i = 0; i<countries.length; i++){
+        
+        const newOption = document.createElement("option")
+        newOption.textContent = countries[i]
+        countryList.appendChild(newOption)
+    }
+}
+
+inputCountries()
+
+// module.exports = inputCountries
