@@ -1,6 +1,10 @@
-<!-- Loop over each object in the projects array -->
+
+<!-- Loop over each object in the blogs array -->
+{{#if blogs.length}}
+  <div class="columns p-6 blog-list">
+      <div class="column">
 {{#each blogs as |blog| }}
-<div class="row mb-4 project">
+<div class="column m-2 blog">
   <div class="col-md-5">
     <h2>
       <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
@@ -10,6 +14,16 @@
     <p>
       {{blog.description}}
     </p>
+    <div class="col-md-4 delete-button">
+        <button id="delete-button" data-id="{{blog.id}}" type="submit" class= "button is-primary my-3" >Delete</button>
+    </div>
   </div>
 </div>
 {{/each}}
+ </div>
+ 
+
+      </div>
+
+ {{/if}}
+<script src="./js/read-review.js"></script>
