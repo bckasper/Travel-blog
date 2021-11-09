@@ -1,15 +1,19 @@
 <!-- Loop over each object in the projects array -->
-{{#each blogs as |blog| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
-    </h2>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{blog.description}}
-    </p>
-  </div>
+<div class="column block panel is-primary is-centered is-vcentered">
+  <h1 class="panel-heading has-text-centered">Read Reviews</h1>
 </div>
+
+{{#each blogs as |blog| }}
+  <div class="column row mb-4 project box">
+    <div class="col-md-5 block">
+      <h2 class="title is-5 has-text-centered">
+        <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
+      </h2>
+    </div>
+    <div class="col-md-7">
+      <p>
+        {{blog.description}}
+      </p>
+    </div>
+  </div>
 {{/each}}
