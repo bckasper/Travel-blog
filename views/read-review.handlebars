@@ -8,9 +8,9 @@
   <div class="columns p-6 blog-list">
       <div class="column">
 {{#each blogs as |blog| }}
-<div class="column m-2 blog">
-  <div class="col-md-5">
-    <h2>
+<div class="column row mb-4 project">
+  <div class="block">
+    <h2 class="title is-5 has-text-centered">
       <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
     </h2>
   </div>
@@ -27,3 +27,4 @@
  </div>
  {{/if}}
 <script src="./js/read-review.js"></script>
+
