@@ -1,19 +1,29 @@
-<!-- Loop over each object in the projects array -->
+
 <div class="column block panel is-primary is-centered is-vcentered">
   <h1 class="panel-heading has-text-centered">Read Reviews</h1>
 </div>
 
+<!-- Loop over each object in the blogs array -->
+{{#if blogs.length}}
+  <div class="columns p-6 blog-list">
+      <div class="column">
 {{#each blogs as |blog| }}
-  <div class="column row mb-4 project box">
-    <div class="col-md-5 block">
-      <h2 class="title is-5 has-text-centered">
-        <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
-      </h2>
-    </div>
-    <div class="col-md-7">
-      <p>
-        {{blog.description}}
-      </p>
+<div class="column m-2 blog">
+  <div class="col-md-5">
+    <h2>
+      <a href="/blogs/{{blog.id}}">{{blog.name}}</a>
+    </h2>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{blog.description}}
+    </p>
+    <div class="col-md-4 delete-button">
+        <button id="delete-button" data-id="{{blog.id}}" type="submit" class= "button is-primary my-3" >Delete</button>
+
     </div>
   </div>
 {{/each}}
+ </div>
+ {{/if}}
+<script src="./js/read-review.js"></script>
