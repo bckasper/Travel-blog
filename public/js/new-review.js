@@ -2,7 +2,7 @@ async function newFormHandler(event) {
     event.preventDefault();
     const name = document.querySelector('#blog-name').value;
     const description = document.querySelector('#blog-text').value;
-    const country_name = document.querySelector('#country-name').value;
+    const country_name = document.querySelector('#country-select').value;
 
     // Send fetch request to add a new blog
     const response = await fetch(`/api/reviews`, {
