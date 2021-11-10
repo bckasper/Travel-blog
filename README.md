@@ -6,7 +6,7 @@ This is a simple application that allows users to write travel reviews based on 
 ## Accessing the application
 The code was deployed using Heroku
 
-**URL to Heroku App:**  
+**URL to Heroku App:**https://intense-scrubland-56931.herokuapp.com/login 
 
 **Github Repo:** https://github.com/bckasper/Travel-blog
 
